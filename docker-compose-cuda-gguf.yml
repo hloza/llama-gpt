@@ -19,7 +19,7 @@ services:
     cap_add:
       - IPC_LOCK
       - SYS_RESOURCE
-    command: '/cuda/run.sh'
+    command: '/bin/sh /cuda/run.sh'
     deploy:
       resources:
         reservations:
