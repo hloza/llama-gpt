@@ -8,7 +8,6 @@ services:
     restart: on-failure
     volumes:
       - "models:/models"
-      - "cuda:/cuda"
     ports:
       - 3011:8000
     environment:
