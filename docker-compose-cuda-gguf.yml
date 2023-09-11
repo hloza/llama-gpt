@@ -10,7 +10,7 @@ services:
       - './models:/models'
       - './cuda:/cuda'
     ports:
-      - 3001:8000
+      - 3011:8000
     environment:
       MODEL: '/models/${MODEL_NAME:-code-llama-2-7b-chat.gguf}'
       MODEL_DOWNLOAD_URL: '${MODEL_DOWNLOAD_URL:-https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF/resolve/main/codellama-7b-instruct.Q4_K_M.gguf}'
@@ -35,7 +35,7 @@ services:
       context: ./ui
       dockerfile: Dockerfile
     ports:
-      - 3000:3000
+      - 3010:3000
     restart: on-failure
     environment:
       - 'OPENAI_API_KEY=sk-XXXXXXXXXXXXXXXXXXXX'
